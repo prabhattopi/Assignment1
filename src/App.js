@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { Button } from "./Components/Button";
+import { Links } from "./Components/Links";
+import { Logo } from "./Components/Logo";
 
 function App() {
+  const sta={
+    display:"flex",
+    justifyContent:"space-around",
+    background:"black",
+    width:"90%",
+    margin:"auto",
+    borderRadius:"5px"
+  },
+  sti={
+    background:"lightgray",
+    padding:"20px"
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div style={sti}>
+    <div style={sta}>
+    <Logo/>
+    <Links/>
+    <Button/>
     </div>
+    </div>
+  </>
   );
 }
 
